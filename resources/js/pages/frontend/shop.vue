@@ -382,7 +382,7 @@
   </div>
 </template>
 <script>
-import loader from "../components/loader.vue";
+import loader from "../../components/frontend/loader.vue";
 
 export default {
   name: "shop",

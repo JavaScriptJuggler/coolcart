@@ -26,11 +26,11 @@
   </div>
 </template>
 <script>
-import policies from "../components/home/policies.vue";
-import feature_products from "../components/home/featureProducts.vue";
-import offer from "../components/home/offer.vue";
-import bestsellers from "../components/home/bestsellers.vue";
-import loader from "../components/loader.vue";
+import policies from "../../components/frontend/home/policies.vue";
+import feature_products from "../../components/frontend/home/featureProducts.vue";
+import offer from "../../components/frontend/home/offer.vue";
+import bestsellers from "../../components/frontend/home/bestsellers.vue";
+import loader from "../../components/frontend/loader.vue";
 export default {
   name: "home",
   data() {

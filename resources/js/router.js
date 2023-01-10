@@ -2,8 +2,8 @@ import { createWebHistory, createRouter } from "vue-router";
 /* imports of components */
 
 // import ExampleComponent from './components/ExampleComponent.vue';
-import home from './pages/home.vue'
-import shop from './pages/shop.vue'
+import home from './pages/frontend/home.vue'
+import shop from './pages/frontend/shop.vue'
 /* routes */
 
 const routes = [
