@@ -1,5 +1,6 @@
 <template>
   <div>
+    <loader v-if="showLoader"></loader>
     <section class="home_banner_area mb-40">
       <div class="banner_inner d-flex align-items-center">
         <div class="container">
@@ -29,13 +30,20 @@ import policies from "../components/home/policies.vue";
 import feature_products from "../components/home/featureProducts.vue";
 import offer from "../components/home/offer.vue";
 import bestsellers from "../components/home/bestsellers.vue";
+import loader from "../components/loader.vue";
 export default {
   name: "home",
+  data() {
+    return {
+      showLoader: false
+    };
+  },
   components: {
     policies,
     feature_products,
     offer,
     bestsellers,
+    loader
   }
 };
 </script>
