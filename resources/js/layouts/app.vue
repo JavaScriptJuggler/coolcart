@@ -1,13 +1,13 @@
 <template>
   <div>
     <!-- conditional rendring of navbar -->
-    <navbar v-if="$route.meta.isFrontendNavBarVisible"></navbar>
+    <navbar></navbar>
     <!-- fade transition on page change and css is in css file -->
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
     <!-- conditional rendring of footer -->
-    <footerbar v-if="$route.meta.isFrontendNavBarVisible" />
+    <footerbar />
   </div>
 </template>
 <script>

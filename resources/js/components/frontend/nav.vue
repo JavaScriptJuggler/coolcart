@@ -123,9 +123,9 @@
                   </li>
 
                   <li class="nav-item">
-                    <a href="#" class="icons">
+                    <router-link to="/login" class="icons">
                       <i class="ti-user" aria-hidden="true"></i>
-                    </a>
+                    </router-link>
                   </li>
 
                   <li class="nav-item">

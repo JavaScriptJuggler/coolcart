@@ -4,7 +4,8 @@ import { createWebHistory, createRouter } from "vue-router";
 // import ExampleComponent from './components/ExampleComponent.vue';
 import home from './pages/frontend/home.vue'
 import shop from './pages/frontend/shop.vue'
-import dashboard from './pages/admin/dashboard.vue'
+import login from './pages/auth/login.vue'
+import register from './pages/auth/register.vue'
 /* routes */
 
 const routes = [
@@ -26,29 +27,28 @@ const routes = [
             isFrontendNavBarVisible: true,
         }
     },
-
-    /* admin routes */
     {
-        path: '/dashboard',
-        name: 'dashboard',
-        component: dashboard,
+        path: '/login',
+        name: 'login',
+        component: login,
         meta: {
-            isAdminNavBarVisible: true,
-            needAuth: true,
+            isFrontendNavBarVisible: true,
         }
-    }
+    },
+    {
+        path: '/register',
+        name: 'register',
+        component: register,
+        meta: {
+            isFrontendNavBarVisible: true,
+        }
+    },
+
 ];
 
 const router = createRouter({
     history: createWebHistory(),
     routes,
-})
-
-/* protect route */
-router.beforeEach((to, from) => {
-    if (to.meta.needAuth) {
-        router.push('/')
-    }
 })
 
 export default router;
