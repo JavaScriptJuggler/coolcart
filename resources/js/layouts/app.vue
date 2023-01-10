@@ -1,10 +1,13 @@
 <template>
   <div>
-    <navbar></navbar>
+    <!-- conditional rendring of navbar -->
+    <navbar v-if="$route.meta.isFrontendNavBarVisible"></navbar>
+    <!-- fade transition on page change and css is in css file -->
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
-    <footerbar />
+    <!-- conditional rendring of footer -->
+    <footerbar v-if="$route.meta.isFrontendNavBarVisible" />
   </div>
 </template>
 <script>
@@ -15,13 +18,6 @@ export default {
   components: {
     navbar,
     footerbar
-  },
-  watch: {
-    $route(to, from) {
-      const toDepth = to.path.split("/").length;
-      const fromDepth = from.path.split("/").length;
-      this.transitionName = toDepth < fromDepth ? "slide-right" : "slide-left";
-    }
   }
 };
 </script>
